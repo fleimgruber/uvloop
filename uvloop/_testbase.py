@@ -21,6 +21,12 @@ import unittest
 import uvloop
 
 
+def skip_windows(o):
+    dec = unittest.skipIf(sys.platform in ('win32', 'cygwin', 'cli'),
+                         'skipped on Windows')
+    return dec(o)
+
+
 class MockPattern(str):
     def __eq__(self, other):
         return bool(re.search(str(self), other, re.S))
