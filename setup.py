@@ -12,9 +12,6 @@ from setuptools.command.build_ext import build_ext as build_ext
 from setuptools.command.sdist import sdist as sdist
 
 
-if sys.platform in ('win32', 'cygwin', 'cli'):
-    raise RuntimeError('uvloop does not support Windows at the moment')
-
 vi = sys.version_info
 if vi < (3, 5):
     raise RuntimeError('uvloop requires Python 3.5 or greater')

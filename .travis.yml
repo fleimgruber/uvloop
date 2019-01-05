@@ -76,6 +76,13 @@ matrix:
           services: [docker]
           env: BUILD=tests,wheels,release
 
+        - os: windows
+          branches: {only: [win]}
+          language: python
+          python: "3.6"
+          services: [docker]
+          env: BUILD=tests,wheels,release
+
 cache:
     pip
 
