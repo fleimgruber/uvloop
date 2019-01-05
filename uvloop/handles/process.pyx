@@ -1,6 +1,6 @@
 @cython.no_gc_clear
 cdef class UVProcess(UVHandle):
-    """Abstract class; wrapper over uv_process_t handle."""
+    """FIXME Abstract class; wrapper over uv_process_t handle."""
 
     def __cinit__(self):
         self.uv_opt_env = NULL
